@@ -3,6 +3,7 @@ package com.hzy.girl.controller;
 import com.hzy.girl.entity.Girl;
 import com.hzy.girl.reponsitory.GirlReponsitory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -20,6 +21,7 @@ public class GirlController {
      * @return
      */
     @GetMapping(value = "girls")
+    @RequestMapping(produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     public List<Girl> girlList() {
         return girlReponsitory.findAll();
     }
