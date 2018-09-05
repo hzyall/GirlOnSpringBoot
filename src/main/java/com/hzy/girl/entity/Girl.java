@@ -1,5 +1,6 @@
 package com.hzy.girl.entity;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -10,7 +11,11 @@ public class Girl {
     @Id
     @GeneratedValue
     private Integer id;
+
+    @Column(name = "cupSize", length = 1)
     private String cupSize;
+
+    @Column(name = "age", length = 3, nullable = false)
     private Integer age;
 
     public Girl() {
