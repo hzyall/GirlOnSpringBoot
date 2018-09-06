@@ -1,4 +1,4 @@
-package com.hzy.girl;
+package com.hzy.girl.aop;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.AfterReturning;
